@@ -1,0 +1,28 @@
+//Questo è il fulcro del progetto:
+Qui metteremo gran parte del codice in modo che sia visibile ad entrambi, e sia modificabile.
+Ho già inserito una breve presentazione di un'idea generale (che può essere applicata a qualsiasi tema sceglieremo)
+
+Le classi che sono riuscito (per ora) ad indentificare sono, in ordine gerarchico:
+
+1)Classe Game //Qui inseriremo tutto il codice per il rendering (il disegnare la grafica) e l'elaborazione degli input.
+
+2)Classe Terrain //Qui progetteremo la mappa e il terreno dove le "unità" si muoveranno e potranno incontrarsi e compiere azioni
+
+3)Classe Structure //Qui definiremo le "strutture" del programma, ovvero quegli elementi statici che provvedono a far apparire le unità,
+                    o processano risorse e altro ancora. 
+
+4)Classe Unit //Qui definiremo i metodi e gli attributi generali delle sottoclassi possibili.
+                  Un esempio tematico è la classe "soldato" o la classe "arciere", che compiono azioni ben differenti.
+                  
+5)Classe CM //o Curses-Miracles (la chiamano così) è la classe dove definiremo le funzioni che permettono grandi cambiamenti all'interno
+                della mappa, ad esempio: quello che in molti giochi sono gli incantesimi, ovvero qualsiasi cosa non sia prodotta da una
+                unità, ma da una decisione dell'utente.
+                
+6)Classe Resource // Può essere semplicemente un conteggiatore di punti (stile arcade) oppure un indicatore di quante risorse sono 
+                  disponibili per compiere determinate azioni (ad esempio: una cellula ha bisogno di un ToT di ATP per compiere le sue
+                  funzioni, o per compiere la mitosi, o per fagocitare un altra cellula)
+
+Cose ancora da scegliere:
+-il tema
+-il sistema di movimento.
+-alcune particolarità dello stile del programma.
