@@ -1,0 +1,42 @@
+Per installare SFML:
+
+1) vai a https://www.sfml-dev.org/download/sfml/2.4.2/ e scegli la versione Windows GCC 6.1.0  MinGW (DW2)-32 bit
+
+2) Quello che verrà scaricato è un file archivio, devi scompattarlo in una cartella
+
+3) scegli una cartella o un indirizzo e sposta la cartella SFML lì dentro.
+    ATTENZIONE: devi aprire la cartella e, ancora, aprire la cartella bin. A questo punto copia l'indirizzo della cartella 
+    per il passo successivo
+
+4) Come per MinGW, devi suggerire al computer dove trovare i file della libreria SFML, quindi devi aprire il pannello di controllo, 
+  andare a impostazioni avanzate di sistema, e aprire la finestra delle variabili di ambiente:
+  
+  Qui devi modificare il PATH (come l'altra volta) e creare una nuova variabile con dentro l'indirizzo che hai copiato prima. 
+  
+5)A questo punto hai installato SFML.
+
+Per usare SFML dentro un progetto di CLION, devi modificare il Cmakelist.txt presente in ogni nuovo progetto.
+
+-----ATTENZIONE: tutto quello che vedi scritto che è preceduto da BLAH BLAH significa che devi modificarlo in modo che corrisponda al tuo 
+computer, al nome del tuo progetto o all'indirizzo di isntallazione di SFML. Tutto il resto deve essere scritto ESATTAMENTE nello stesso 
+modo!------
+-------------------------------------------------------------------------------------------------------------------------------------
+cmake_minimum_required(VERSION 3.6)
+project(BLAH BLAH NOME DEL TUO PROGETTO)
+
+set(CMAKE_CXX_STANDARD 11)
+
+//ricordati che questo NON è il tuo indirizzo!!! Devi farlo puntare alla cartella di SFML cmake\modules, come sta scritto sotto!
+set (CMAKE_MODULE_PATH "BLAH BLAH D:\\Program Files (x86)\\JetBrains\\CLion 2016.3.2\\bin\\SFML-2.4.2\\cmake\\Modules") 
+find_package(SFML 2 COMPONENTS system window graphics audio REQUIRED)
+include_directories(${SFML_INCLUDE_DIR})
+
+
+set(SOURCE_FILES main.cpp)
+add_executable(BLAH BLAH NOME DEL PROGETTO ${SOURCE_FILES})
+target_link_libraries(BLAH BLAH NOME DEL PROGETTO ${SFML_LIBRARIES})
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Questo dovrebbe farti funzionare qualsiasi libreria presente in SFML. Sul sito trovi un numero incredibile di tutorial sintetici e ben 
+fatti, in cui ti mostrano anche il codice e la sua esecuzione.
+
