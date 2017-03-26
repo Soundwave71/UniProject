@@ -1,6 +1,6 @@
 //Questo è il fulcro del progetto:
 Qui metteremo gran parte del codice in modo che sia visibile ad entrambi, e sia modificabile.
-Ho già inserito una breve presentazione di un'idea generale (che può essere applicata a qualsiasi tema sceglieremo)
+Ho già inserito nella repository una presentazione di un'idea generale (che può essere applicata a qualsiasi tema sceglieremo).
 
 Le classi che sono riuscito (per ora) ad indentificare sono, in ordine gerarchico:
 
