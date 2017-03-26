@@ -9,14 +9,13 @@ Le classi che sono riuscito (per ora) ad indentificare sono, in ordine gerarchic
 2)Classe Terrain //Qui progetteremo la mappa e il terreno dove le "unità" si muoveranno e potranno incontrarsi e compiere azioni
 
 3)Classe Structure //Qui definiremo le "strutture" del programma, ovvero quegli elementi statici che provvedono a far apparire le unità,
-                    o processano risorse e altro ancora. 
+                    o processano risorse, e altro ancora. 
 
 4)Classe Unit //Qui definiremo i metodi e gli attributi generali delle sottoclassi possibili.
                   Un esempio tematico è la classe "soldato" o la classe "arciere", che compiono azioni ben differenti.
                   
 5)Classe CM //o Curses-Miracles (la chiamano così) è la classe dove definiremo le funzioni che permettono grandi cambiamenti all'interno
-                della mappa, ad esempio: quello che in molti giochi sono gli incantesimi, ovvero qualsiasi cosa non sia prodotta da una
-                unità, ma da una decisione dell'utente.
+                della mappa e del gioco, ad esempio: aumentare la temperatura della capsula-petri, ovvero qualsiasi cosa non sia                         prodotta da una unità, ma da una input dell'utente. 
                 
 6)Classe Resource // Può essere semplicemente un conteggiatore di punti (stile arcade) oppure un indicatore di quante risorse sono 
                   disponibili per compiere determinate azioni (ad esempio: una cellula ha bisogno di un ToT di ATP per compiere le sue
@@ -26,3 +25,16 @@ Cose ancora da scegliere:
 -il tema
 -il sistema di movimento.
 -alcune particolarità dello stile del programma.
+
+Riguardo alla idea generale, pensavo di creare delle classi unità che siano più o meno efficienti a seconda della combinazione.
+Mi spiego meglio, immagina la morra cinese:
+
+Carta batte sasso     --->        così come     --->       l'arciere è molto efficiente contro il cavaliere.
+Sasso batte forbice   --->        così come     --->       il cavaliere è molto efficiente contro il soldato.
+Forbice batte carta   --->        cosi come     --->       il soldato è molto efficiente contro l'arciere.
+
+Ovviamente dovremo fare più combinazioni e MOLTE più classi! 
+
+
+
+
